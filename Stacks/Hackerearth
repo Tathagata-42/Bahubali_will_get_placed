@@ -1,0 +1,53 @@
+Question - Fun Game
+https://www.hackerearth.com/practice/data-structures/stacks/basics-of-stacks/practice-problems/algorithm/fun-game-91510e9f/description/
+
+Sol-
+
+#include<bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+   long long int n,k,i,j,number,A,B;
+   cin>>n;
+   stack <int> s;
+   queue <int> q;
+
+   for(i=0;i<n;i++)
+   {
+      cin>>number;
+
+      s.push(number);
+
+      q.push(number);   
+   }
+   for(;;)
+   {
+
+      A=s.top();
+
+      B=q.front();
+    if (A>B)
+      {
+         q.pop();
+         cout<<"2 ";
+      }
+    if (A<B)
+      {
+         s.pop();
+         cout<<"1 ";
+      }
+    if (A==B)
+      {
+         cout<<"0 ";
+         s.pop(); 
+         q.pop();
+      }
+    if (q.empty() || s.empty())
+      {
+         break;
+      }
+   }
+return 0;
+}
