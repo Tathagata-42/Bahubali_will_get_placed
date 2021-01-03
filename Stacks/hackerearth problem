@@ -21,7 +21,7 @@ int main()
     char stack[10000];
 
 for(i=0;i<n;++i)
-{
+    {
 	if(top==-1)
 	{
 		top+=1;
@@ -42,7 +42,6 @@ for(i=0;i<n;++i)
 }
 
 if(top==-1)
-
 cout<<"KHALI";
 
 else
@@ -50,8 +49,6 @@ else
 	for(i=0;i<=top;++i)
 		cout<<stack[i];
 }
-
 	cout<<endl;
-
 	}
 }
